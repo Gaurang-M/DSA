@@ -3,9 +3,9 @@ var skipChar = function(str,target,ans,i){
         return ans
     }
     if(str[i] == target){
-        return strBuilder(str, target, ans, ++i );
+        return skipChar(str, target, ans, ++i );
     }else{
-        return strBuilder(str, target, ans+str[i], ++i );
+        return skipChar(str, target, ans+str[i], ++i );
     }
      
 }
@@ -23,4 +23,4 @@ var skipApple = function(str,target,ans,i){
      
 }
 
-console.log(strBuilder("accah","a","",0));
+console.log(skipChar("accah","a","",0));
